@@ -11,7 +11,7 @@ set showmatch               " 显示括号配对情况
 set hlsearch                " 开启高亮显示结果
 set incsearch               " 开启实时搜索功能
 set nowrapscan              " 搜索到文件两端时不重新搜索
-set cursorline             " 突出显示当前行
+"set cursorline             " 突出显示当前行
 "set hidden                 " 允许在有未保存的修改时切换缓冲区
 "set list                   " 显示Tab符，使用一高亮竖线代替
 syntax enable               " 打开语法高亮
@@ -21,3 +21,24 @@ filetype indent on          " 针对不同的文件类型采用不同的缩进�
 filetype plugin on          " 针对不同的文件类型加载对应的插件
 set nobackup                " 设置无备份文件
 set nocompatible            " 不使用vi兼容的模式
+set helplang=cn				" 显示中文帮助			
+set encoding=utf-8			" 设置编码
+Helptags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+let Tlist_Show_One_File=1  "不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow=1 "如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
+"if has("cscope")
+"   set csprg=/usr/bin/cscope
+"   set csto=0
+"   set cst
+"   set nocsverb
+"   if filereadable("cscope.out")
+"        cs add cscope.out
+"   elseif $CSCOPE_DB != ""
+"        cs add $CSCOPE_DB
+"   endif
+"   set csverb
+"endif
+
+map <silent> <F9> :TlistToggle<cr> "Tlist打开以及关闭切换
