@@ -11,7 +11,7 @@ set showmatch               " 显示括号配对情况
 set hlsearch                " 开启高亮显示结果
 set incsearch               " 开启实时搜索功能
 set nowrapscan              " 搜索到文件两端时不重新搜索
-"set cursorline             " 突出显示当前行
+set cursorline             " 突出显示当前行
 "set hidden                 " 允许在有未保存的修改时切换缓冲区
 "set list                   " 显示Tab符，使用一高亮竖线代替
 syntax enable               " 打开语法高亮
@@ -42,3 +42,5 @@ let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
 "endif
 
 map <silent> <F9> :TlistToggle<cr> "Tlist打开以及关闭切换
+"set background=dark
+"colorscheme solarized
