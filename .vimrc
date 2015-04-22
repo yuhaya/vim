@@ -23,3 +23,19 @@ set nobackup                " 设置无备份文件
 set nocompatible            " 不使用vi兼容的模式
 set helplang=cn				" 显示中文帮助			
 set encoding=utf-8			" 设置编码
+Helptags
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+let Tlist_Show_One_File=1  
+let Tlist_Exit_OnlyWindow=1
+"if has("cscope")
+"   set csprg=/usr/bin/cscope
+"   set csto=0
+"   set cst
+"   set nocsverb
+"   if filereadable("cscope.out")
+"        cs add cscope.out
+"   elseif $CSCOPE_DB != ""
+"        cs add $CSCOPE_DB
+"   endif
+"   set csverb
+"endif
