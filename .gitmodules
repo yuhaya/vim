@@ -10,3 +10,6 @@
 [submodule "bundle/code_complete"]
 	path = bundle/code_complete
 	url = git@github.com:mbbill/code_complete.git
+[submodule "bundle/php"]
+	path = bundle/php
+	url = git@github.com:vim-scripts/php.vim--Garvin.git
