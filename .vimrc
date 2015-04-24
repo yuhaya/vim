@@ -6,12 +6,13 @@ set backspace=2             " 设置退格键可用
 set cindent shiftwidth=4    " 自动缩进4空格
 set smartindent             " 智能自动缩进
 set ai!                     " 设置自动缩进
-set nu!                     " 显示行号
+set nu                      " 显示行号
 set showmatch               " 显示括号配对情况
 set hlsearch                " 开启高亮显示结果
 set incsearch               " 开启实时搜索功能
 set nowrapscan              " 搜索到文件两端时不重新搜索
-set cursorline             " 突出显示当前行
+set cursorline              " 突出显示当前行
+set mouse=a					" 支持触摸板
 "set hidden                 " 允许在有未保存的修改时切换缓冲区
 "set list                   " 显示Tab符，使用一高亮竖线代替
 syntax enable               " 打开语法高亮
@@ -42,5 +43,6 @@ let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
 "endif
 
 map <silent> <F9> :TlistToggle<cr> "Tlist打开以及关闭切换
-"set background=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
