@@ -82,8 +82,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>  "跳转到�
 
 
 
-
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
